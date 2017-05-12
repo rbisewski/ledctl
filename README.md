@@ -35,9 +35,9 @@ this is incorrect.
 
 0) Build this program as you would a simple golang module.
 
-    go build ledctl
+    go build
 
-1) Run the program to gather a list of devices.
+1) Run the program to gather data from a list of devices.
 
     ledctl
 
