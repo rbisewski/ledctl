@@ -45,7 +45,7 @@ var (
     // Attribute file for storing the hardware device current brightness.
     brightness_file_location = "brightness"
 
-    // Attribute file for storing the hardware device current maxbrightness.
+    // Attribute file for storing the hardware device max brightness.
     max_brightness_file_location = "max_brightness"
 )
 
