@@ -27,7 +27,7 @@ clean:
 
 install: build
 	@echo installing executable file to /usr/bin/ledctl
-	@sudo cp trackpadctl /usr/bin/ledctl
+	@sudo cp lectl /usr/bin/ledctl
 
 uninstall: clean
 	@echo removing executable file from /usr/bin/ledctl
