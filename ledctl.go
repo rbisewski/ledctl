@@ -32,6 +32,11 @@ import (
 // Globals
 //
 var (
+	// default version value
+	Version = "0.0"
+
+	// Whether or not to print the current version of the program
+	printVersion = false
 
 	// Requested LED device, if any
 	givenDevice string
@@ -51,6 +56,10 @@ var (
 
 // Initialize the argument input flags.
 func init() {
+
+	// Version mode flag
+	flag.BoolVar(&printVersion, "version", false,
+		"Print the current version of this program and exit.")
 
 	// LED device flag
 	flag.StringVar(&givenDevice, "device", "",
@@ -72,6 +81,13 @@ func main() {
 
 	// Parse the flags, if any.
 	flag.Parse()
+
+	// if requested, go ahead and print the version; afterwards exit the
+	// program, since this is all done
+	if printVersion {
+		fmt.Println("ledctl v" + Version)
+		os.Exit(0)
+	}
 
 	// If a given device is mentioned and a sane brightness level, go
 	// ahead and attempt to set the device to that brightness level.
