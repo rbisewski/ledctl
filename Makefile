@@ -19,7 +19,7 @@ all: build
 
 build:
 	@echo 'Building ledctl...'
-	@go build
+	@go build -ldflags '-s -w -X main.Version='${VERSION}
 
 clean:
 	@echo 'Cleaning...'
