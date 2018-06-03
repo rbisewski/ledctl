@@ -45,6 +45,10 @@ this is incorrect.
 
     sudo ledctl --device input2::scrolllock --level 1
 
+# Todo
+
+* Consider adding functionality to generate tables without needing \t chars.
+
 
 # Author
 
