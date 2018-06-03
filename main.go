@@ -129,13 +129,7 @@ func getLedInfo() (string, error) {
 	output := ""
 
 	// Print out a few lines telling the user that the program has started.
-	output += "\n----------------------------------\n" +
-		"LED Brightness Info Tool for Linux\n\n" +
-		"The following info is displayed:\n\n" +
-		"* Device Name\n" +
-		"* Brightness\n" +
-		"* Maximum Brightness\n" +
-		"----------------------------------\n\n"
+	output += "\nDevice Name\t\t\tBrightness\tMaximum Brightness\n\n"
 
 	// Attempt to read in our file contents.
 	listOfDeviceDirs, err := ioutil.ReadDir(ledsDirectory)
@@ -192,7 +186,7 @@ func getLedInfo() (string, error) {
 		name := strings.Trim(dir.Name(), " \n\t\v")
 
 		// Finally print out the current line.
-		output += name + ">\t" + strconv.Itoa(brightness) + "\t" +
+		output += name + " \t\t" + strconv.Itoa(brightness) + "\t\t" +
 			strconv.Itoa(maxBrightness) + "\n"
 	}
 
