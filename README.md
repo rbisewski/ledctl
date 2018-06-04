@@ -43,7 +43,7 @@ this is incorrect.
 
 2) Set the brightness level of a given device (this requires sudo).
 
-    sudo ledctl --device input2::scrolllock --level 1
+    sudo ledctl -device input2::scrolllock -level 1
 
 # Todo
 
